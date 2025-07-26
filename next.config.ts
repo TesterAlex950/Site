@@ -1,7 +1,5 @@
 import type {NextConfig} from 'next';
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
@@ -9,9 +7,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export',
-  basePath: isProduction ? '/studio-master' : '',
-  assetPrefix: isProduction ? '/studio-master' : '',
+  images: {
+    domains: ['vercel.app', 'localhost'],
+  },
 };
 
 export default nextConfig;
