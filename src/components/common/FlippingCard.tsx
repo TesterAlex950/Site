@@ -25,7 +25,7 @@ export function FlippingCard({ icon, name, description, className, details }: Fl
   }, []);
 
   return (
-    <div className={cn('flipper h-24', className)}>
+    <div className={cn('flipper h-24', className)} style={{ willChange: 'transform' }}>
       <div className='flip-inner rounded-lg shadow-md'>
         {/* Front */}
         <div className='flip-front'>
