@@ -18,13 +18,12 @@ export function HeroSection() {
                     bottom: '0.25rem',
                     zIndex: -10,
                     borderRadius: '1rem',
-                    filter: 'blur(12px)',
-                    opacity: 0.4,
                     pointerEvents: 'none',
                     background:
                       'linear-gradient(90deg, #fde68a, #fb923c, #f472b6, #60a5fa, #34d399, #a78bfa, #fde68a)',
                     backgroundSize: '200% 200%',
-                    animation: 'gradient-move 4s ease-in-out infinite',
+                    animation:
+                      'gradient-move 4s ease-in-out infinite, shadow-breathe 3s ease-in-out infinite',
                   }}
                 />
                 <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-text-glow px-6 py-2'>

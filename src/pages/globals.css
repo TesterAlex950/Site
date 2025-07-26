@@ -99,6 +99,18 @@ html {
   }
 }
 
+@keyframes shadow-breathe {
+  0%,
+  100% {
+    filter: blur(12px);
+    opacity: 0.4;
+  }
+  50% {
+    filter: blur(16px);
+    opacity: 0.6;
+  }
+}
+
 @keyframes gradient-text-move {
   0% {
     background-position: 0% 50%;
