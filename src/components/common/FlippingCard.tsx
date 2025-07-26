@@ -41,7 +41,7 @@ export function FlippingCard({ icon, name, description, className, details }: Fl
         </div>
         {/* Back */}
         <div className='flip-back'>
-          <Card className='h-full bg-card animate-shadow-pulse' style={shadowAnimStyle}>
+          <Card className='h-full bg-card' style={shadowAnimStyle}>
             <CardContent className='p-4 flex flex-col justify-center items-center h-full text-center'>
               {Array.isArray(details) ? (
                 <ul className='text-sm text-muted-foreground space-y-1 list-none'>

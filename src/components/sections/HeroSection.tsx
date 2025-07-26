@@ -29,7 +29,8 @@ export function HeroSection() {
                   }}
                 />
                 <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-text-glow px-6 py-2'>
-                  Hi I'm Andrii
+                  <span className='sm:hidden animate-text-glow'>Hi I'm Andrii</span>
+                  <span className='hidden sm:inline'>Hi I'm Andrii</span>
                 </h1>
               </div>
               <p className='mb-4 text-lg text-muted-foreground'>Let me introduce myself</p>
