@@ -10,7 +10,6 @@ export function HeroSection() {
             <CardContent className='p-8 md:p-12 lg:p-16 text-center flex flex-col items-center'>
               <div className='relative inline-block mb-6'>
                 <div
-                  className='hidden sm:block'
                   style={{
                     position: 'absolute',
                     left: '0.5rem',
@@ -19,8 +18,8 @@ export function HeroSection() {
                     bottom: '0.25rem',
                     zIndex: -10,
                     borderRadius: '1rem',
-                    filter: 'blur(24px)',
-                    opacity: 0.6,
+                    filter: 'blur(12px)',
+                    opacity: 0.4,
                     pointerEvents: 'none',
                     background:
                       'linear-gradient(90deg, #fde68a, #fb923c, #f472b6, #60a5fa, #34d399, #a78bfa, #fde68a)',
@@ -29,8 +28,7 @@ export function HeroSection() {
                   }}
                 />
                 <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-text-glow px-6 py-2'>
-                  <span className='sm:hidden mobile-gradient-text'>Hi I'm Andrii</span>
-                  <span className='hidden sm:inline'>Hi I'm Andrii</span>
+                  Hi I'm Andrii
                 </h1>
               </div>
               <p className='mb-4 text-lg text-muted-foreground'>Let me introduce myself</p>
