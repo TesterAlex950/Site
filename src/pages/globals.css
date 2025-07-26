@@ -73,11 +73,12 @@ html {
 
 @layer components {
   .gradient-card::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: -1px;
     border-radius: calc(var(--radius) + 1px);
-    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+    background: radial-gradient(
+      400px circle at var(--mouse-x) var(--mouse-y),
       hsl(var(--accent) / 0.8),
       transparent 80%
     );
@@ -89,7 +90,8 @@ html {
 
 /* Consolidated gradient animations */
 @keyframes gradient-move {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -98,30 +100,51 @@ html {
 }
 
 @keyframes gradient-text-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes border-gradient-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes gradient-hue-rotate {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 @tailwind utilities {
   @keyframes text-glow {
     0% {
-      text-shadow: 0 0 5px hsl(var(--primary) / 0.2), 0 0 10px hsl(var(--primary) / 0.2), 0 0 20px hsl(var(--primary) / 0.2);
+      text-shadow:
+        0 0 5px hsl(var(--primary) / 0.2),
+        0 0 10px hsl(var(--primary) / 0.2),
+        0 0 20px hsl(var(--primary) / 0.2);
     }
     50% {
-      text-shadow: 0 0 10px hsl(var(--primary) / 0.4), 0 0 20px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.4);
+      text-shadow:
+        0 0 10px hsl(var(--primary) / 0.4),
+        0 0 20px hsl(var(--primary) / 0.4),
+        0 0 40px hsl(var(--primary) / 0.4);
     }
     100% {
-      text-shadow: 0 0 5px hsl(var(--primary) / 0.2), 0 0 10px hsl(var(--primary) / 0.2), 0 0 20px hsl(var(--primary) / 0.2);
+      text-shadow:
+        0 0 5px hsl(var(--primary) / 0.2),
+        0 0 10px hsl(var(--primary) / 0.2),
+        0 0 20px hsl(var(--primary) / 0.2);
     }
   }
   .animate-text-glow {
@@ -144,20 +167,20 @@ html {
   }
 
   @keyframes shadow-pulse {
-    0% { 
+    0% {
       box-shadow: 0 0 20px -2px hsl(var(--primary) / 0.1);
     }
-    50% { 
+    50% {
       box-shadow: 0 0 20px -2px hsl(var(--primary) / 0.4);
     }
-    100% { 
+    100% {
       box-shadow: 0 0 20px -2px hsl(var(--primary) / 0.1);
     }
   }
   .animate-shadow-pulse {
     animation: shadow-pulse 5s ease-in-out infinite alternate;
   }
-  
+
   @keyframes slide-in-from-bottom {
     0% {
       transform: translateY(20px);
@@ -188,63 +211,82 @@ html {
 }
 
 @keyframes glow-pulse {
-  0%, 100% { filter: drop-shadow(0 0 12px rgba(255,186,57,0.7)); }
-  50% { filter: drop-shadow(0 0 18px rgba(255,186,57,1)); }
+  0%,
+  100% {
+    filter: drop-shadow(0 0 12px rgba(255, 186, 57, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(255, 186, 57, 1));
+  }
 }
 .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
 }
 
-.flipper {
-  perspective: 1000px;
-}
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-.flipper:hover .flip-inner {
-  transform: rotateY(180deg);
-}
-.flip-front, .flip-back {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
+.flip-front,
 .flip-back {
-  transform: rotateY(180deg);
+  overflow: hidden;
 }
 
 @keyframes phone-ring {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(-15deg); }
-  20% { transform: rotate(15deg); }
-  30% { transform: rotate(-10deg); }
-  40% { transform: rotate(10deg); }
-  50% { transform: rotate(-6deg); }
-  60% { transform: rotate(6deg); }
-  70% { transform: rotate(-3deg); }
-  80% { transform: rotate(3deg); }
-  85%, 100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  60% {
+    transform: rotate(6deg);
+  }
+  70% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+  85%,
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .animate-phone-ring {
   animation: phone-ring 1s linear infinite;
 }
 
 @keyframes mail-bounce {
-  0%   { transform: translateY(0); }
-  20%  { transform: translateY(-8px); }
-  40%  { transform: translateY(0); }
-  60%  { transform: translateY(-4px); }
-  80%  { transform: translateY(0); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-8px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .animate-mail-bounce {
-  animation: mail-bounce 1.2s cubic-bezier(0.4,0,0.2,1) infinite;
+  animation: mail-bounce 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes telegram-fly {
@@ -266,11 +308,24 @@ html {
   }
 }
 .animate-telegram-fly {
-  animation: telegram-fly 3s cubic-bezier(0.4,0,0.2,1) infinite;
+  animation: telegram-fly 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .animated-gradient-border {
-  background: linear-gradient(90deg, #FFE5B4, #FFB26B, #FFA552, #FF7F5C, #FF5C57, #FFBB33, #FFD369, #FF9A8B, #FFD8A9, #FF8C61, #FFE5B4);
+  background: linear-gradient(
+    90deg,
+    #ffe5b4,
+    #ffb26b,
+    #ffa552,
+    #ff7f5c,
+    #ff5c57,
+    #ffbb33,
+    #ffd369,
+    #ff9a8b,
+    #ffd8a9,
+    #ff8c61,
+    #ffe5b4
+  );
   background-size: 800% 800%;
   animation: border-gradient-move 6s linear infinite;
   border-radius: 0.5rem;
@@ -288,89 +343,105 @@ html {
 }
 
 .border-gradient-univ {
-  border-image: linear-gradient(90deg, #FFD36933, #FF8C6133, #FFB26B33) 1;
+  border-image: linear-gradient(90deg, #ffd36933, #ff8c6133, #ffb26b33) 1;
 }
 
 @keyframes certificate-fade-in {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .animate-certificate-fade-in {
-  animation: certificate-fade-in 0.4s cubic-bezier(0.4,0,0.2,1) forwards;
+  animation: certificate-fade-in 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes smile-change {
-  0% { content: ":("; }
-  50% { content: ":|"; }
-  100% { content: ":)"; }
+  0% {
+    content: ':(';
+  }
+  50% {
+    content: ':|';
+  }
+  100% {
+    content: ':)';
+  }
 }
 .animate-smile-change {
   animation: smile-change 3s ease-in-out infinite;
 }
 /* Альтернативний підхід через CSS псевдоелементи */
 .animate-smile-change::after {
-  content: ":(";
+  content: ':(';
   animation: smile-change 3s ease-in-out infinite;
 }
 
 @keyframes mouth-morph {
-  0% { d: path("M8 16C8 16 10 14 12 14S16 16 16 16"); }
-  100% { d: path("M8 16C8 16 10 18 12 18S16 16 16 16"); }
+  0% {
+    d: path('M8 16C8 16 10 14 12 14S16 16 16 16');
+  }
+  100% {
+    d: path('M8 16C8 16 10 18 12 18S16 16 16 16');
+  }
 }
 .animate-mouth-morph {
   animation: mouth-morph 3s ease-in-out forwards;
 }
 
 @keyframes chevron-gradient-flow {
-  0% { 
+  0% {
     color: #fde68a;
     filter: drop-shadow(0 0 8px rgba(253, 230, 138, 0.8));
   }
-  8.33% { 
+  8.33% {
     color: #fbbf24;
     filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.8));
   }
-  16.66% { 
+  16.66% {
     color: #fb923c;
     filter: drop-shadow(0 0 8px rgba(251, 146, 60, 0.8));
   }
-  25% { 
+  25% {
     color: #f97316;
     filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.8));
   }
-  33.33% { 
+  33.33% {
     color: #f472b6;
     filter: drop-shadow(0 0 8px rgba(244, 114, 182, 0.8));
   }
-  41.66% { 
+  41.66% {
     color: #ec4899;
     filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.8));
   }
-  50% { 
+  50% {
     color: #60a5fa;
     filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.8));
   }
-  58.33% { 
+  58.33% {
     color: #3b82f6;
     filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
   }
-  66.66% { 
+  66.66% {
     color: #34d399;
     filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.8));
   }
-  75% { 
+  75% {
     color: #10b981;
     filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.8));
   }
-  83.33% { 
+  83.33% {
     color: #a78bfa;
     filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.8));
   }
-  91.66% { 
+  91.66% {
     color: #8b5cf6;
     filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.8));
   }
-  100% { 
+  100% {
     color: #fde68a;
     filter: drop-shadow(0 0 8px rgba(253, 230, 138, 0.8));
   }
