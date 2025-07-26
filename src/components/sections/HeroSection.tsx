@@ -29,7 +29,7 @@ export function HeroSection() {
                   }}
                 />
                 <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-text-glow px-6 py-2'>
-                  <span className='sm:hidden mobile-glow'>Hi I'm Andrii</span>
+                  <span className='sm:hidden mobile-gradient-text'>Hi I'm Andrii</span>
                   <span className='hidden sm:inline'>Hi I'm Andrii</span>
                 </h1>
               </div>
