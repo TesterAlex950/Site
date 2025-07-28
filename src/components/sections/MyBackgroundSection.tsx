@@ -15,7 +15,7 @@ export function MyBackgroundSection() {
               <div className='grid gap-10'>
                 <div className='flex flex-col justify-center items-center space-y-4 text-center'>
                   <div className='space-y-2 w-full'>
-                    <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl font-headline mb-12'>
+                    <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl font-headline mb-12 drop-shadow-lg font-sans'>
                       My Background
                     </h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-items-center mb-10'>
@@ -29,11 +29,11 @@ export function MyBackgroundSection() {
                           alt='KPI'
                           className='h-16 w-auto grayscale group-hover:grayscale-0 transition duration-300'
                         />
-                        <span className='mt-2 text-xs text-muted-foreground font-semibold'>
+                        <span className='mt-2 text-xs text-muted-foreground font-semibold drop-shadow-sm font-sans mb-1'>
                           KPI
                         </span>
                         <span
-                          className='mt-1 text-xs text-muted-foreground block max-w-[180px] text-justify'
+                          className='mt-1 text-xs text-muted-foreground block max-w-[180px] text-justify font-medium drop-shadow-sm font-sans mb-2 px-1'
                           style={{ textAlignLast: 'left' }}
                         >
                           This is my home university, where I have already studied for five years
@@ -52,11 +52,11 @@ export function MyBackgroundSection() {
                           alt='KNU'
                           className='h-16 w-auto grayscale group-hover:grayscale-0 transition duration-300'
                         />
-                        <span className='mt-2 text-xs text-muted-foreground font-semibold'>
+                        <span className='mt-2 text-xs text-muted-foreground font-semibold drop-shadow-sm font-sans mb-1'>
                           KNU
                         </span>
                         <span
-                          className='mt-1 text-xs text-muted-foreground block max-w-[180px] text-justify'
+                          className='mt-1 text-xs text-muted-foreground block max-w-[180px] text-justify font-medium drop-shadow-sm font-sans mb-2 px-1'
                           style={{ textAlignLast: 'left' }}
                         >
                           Studying at this university is a symbol of victory for me — a confirmation
@@ -70,17 +70,15 @@ export function MyBackgroundSection() {
                             style={{ boxShadow: '0 0 32px 8px #a21caf55' }}
                           />
                           <span
-                            className='mt-1 text-xs text-muted-foreground block text-sm text-justify'
+                            className='mt-1 text-xs text-muted-foreground block text-sm text-justify font-medium drop-shadow-sm font-sans mb-2 px-1'
                             style={{ textAlignLast: 'left' }}
                           >
-                            My introduction to marketing began at university — during a course on
-                            startups, we had the opportunity to complete a program by Genesis
-                            focused on marketing fundamentals and key metrics. This initial
-                            experience sparked my interest so much that I began to explore the field
-                            independently. Since then, I've been regularly taking courses and
-                            reading industry-specific resources. Among other things, I completed a
-                            course by <PopoverCertificate />. Marketing has become more than just an
-                            interest for me — it's a field in which I continue to grow and see my
+                            My interest in marketing started at university, when I took a course on
+                            startups and completed a program by Genesis about marketing basics and
+                            key metrics. This experience encouraged me to study marketing further on
+                            my own. Since then, I have regularly taken courses and read professional
+                            resources. For example, I completed a course by <PopoverCertificate />.
+                            Marketing is now a field in which I continue to develop and see my
                             professional future.
                           </span>
                         </div>
